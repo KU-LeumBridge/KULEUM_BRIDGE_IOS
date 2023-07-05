@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
+		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
+		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
+		A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */; };
 		A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */; };
 		A1F909DA2A54F9C1004559AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F909D92A54F9C1004559AF /* ContentView.swift */; };
 		A1F909DC2A54F9C2004559AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F909DB2A54F9C2004559AF /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
+		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
+		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreInfoData.swift; sourceTree = "<group>"; };
 		A1F909D42A54F9C1004559AF /* KuleumBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuleumBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuleumBridgeApp.swift; sourceTree = "<group>"; };
 		A1F909D92A54F9C1004559AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			children = (
 				A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */,
 				A1F909D92A54F9C1004559AF /* ContentView.swift */,
+				A11153052A55648A006E2282 /* TastePlaceView.swift */,
+				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
+				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
+				A11153092A558696006E2282 /* FoodListView.swift */,
 				A1F909DB2A54F9C2004559AF /* Assets.xcassets */,
 				A1F909DD2A54F9C2004559AF /* Preview Content */,
 			);
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A111530A2A558696006E2282 /* FoodListView.swift in Sources */,
 				A1F909DA2A54F9C1004559AF /* ContentView.swift in Sources */,
+				A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */,
+				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
+				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
 				A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
