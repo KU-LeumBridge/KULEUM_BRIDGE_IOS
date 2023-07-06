@@ -12,6 +12,8 @@
 		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
 		A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */; };
 		A111530E2A55A5AE006E2282 /* FoodStoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */; };
+		A19EAC862A56F2B700FE37CC /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19EAC852A56F2B700FE37CC /* NoticeView.swift */; };
+		A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */; };
 		A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */; };
 		A1F909DA2A54F9C1004559AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F909D92A54F9C1004559AF /* ContentView.swift */; };
 		A1F909DC2A54F9C2004559AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F909DB2A54F9C2004559AF /* Assets.xcassets */; };
@@ -24,6 +26,9 @@
 		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreInfoData.swift; sourceTree = "<group>"; };
 		A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreMapView.swift; sourceTree = "<group>"; };
+		A19EAC852A56F2B700FE37CC /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeWebView.swift; sourceTree = "<group>"; };
+		A19EAC892A56FE8400FE37CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A1F909D42A54F9C1004559AF /* KuleumBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuleumBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuleumBridgeApp.swift; sourceTree = "<group>"; };
 		A1F909D92A54F9C1004559AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,9 +66,12 @@
 		A1F909D62A54F9C1004559AF /* KuleumBridge */ = {
 			isa = PBXGroup;
 			children = (
+				A19EAC892A56FE8400FE37CC /* Info.plist */,
 				A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */,
 				A1F909D92A54F9C1004559AF /* ContentView.swift */,
 				A11153052A55648A006E2282 /* TastePlaceView.swift */,
+				A19EAC852A56F2B700FE37CC /* NoticeView.swift */,
+				A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */,
 				A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */,
 				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
 				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
@@ -152,12 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19EAC862A56F2B700FE37CC /* NoticeView.swift in Sources */,
 				A111530A2A558696006E2282 /* FoodListView.swift in Sources */,
 				A1F909DA2A54F9C1004559AF /* ContentView.swift in Sources */,
 				A111530E2A55A5AE006E2282 /* FoodStoreMapView.swift in Sources */,
 				A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */,
 				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
+				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,
 				A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +299,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KuleumBridge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KuleumBridge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +328,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KuleumBridge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KuleumBridge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
