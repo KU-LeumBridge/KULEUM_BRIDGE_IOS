@@ -32,9 +32,7 @@ struct TastePlaceView: View{
        
             Spacer().frame(height: 30)
 
-            Button(action: {
-                print("지도로 보자")
-            }) {
+            NavigationLink(destination: FoodStoreMapView()) {
                 Text("지도로 보기 🗺️")
                     .foregroundColor(.white)
                     .font(.system(size: 16))
@@ -42,8 +40,8 @@ struct TastePlaceView: View{
                     .padding()
                     .background(Color.orange)
                     .cornerRadius(20)
+                    .shadow(radius: 6, x:5, y: 5)
             }
-            .shadow(radius: 10, y: 5)
         }
     }
 }
