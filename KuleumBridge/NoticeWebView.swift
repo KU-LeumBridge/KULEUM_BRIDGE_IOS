@@ -1,10 +1,3 @@
-//
-//  NoticeWebView.swift
-//  KuleumBridge
-//
-//  Created by 최서연 on 2023/07/06.
-//
-
 import SwiftUI
 import WebKit
 
@@ -28,6 +21,8 @@ struct WKWebViewPractice: UIViewRepresentable {
         
         webView.load(URLRequest(url: url))
     }
+    
+    // 추가구현 해보기 : webView의 ProgressBar 생성하기.
 }
 
 // http 통신 허용 필요 - ATS의 Allow Arbitary Loads YES 설정
