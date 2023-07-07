@@ -1,10 +1,3 @@
-//
-//  TastePlaceView.swift
-//  KuleumBridge
-//
-//  Created by 최서연 on 2023/07/05.
-//
-
 import SwiftUI
 
 struct TastePlaceView: View{
@@ -45,7 +38,6 @@ struct TastePlaceView: View{
         }
     }
 }
-
 
 
 struct TastePlaceView_Previews: PreviewProvider{

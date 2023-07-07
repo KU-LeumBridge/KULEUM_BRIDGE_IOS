@@ -1,10 +1,3 @@
-//
-//  NoticeWebView.swift
-//  KuleumBridge
-//
-//  Created by 최서연 on 2023/07/06.
-//
-
 import SwiftUI
 import WebKit
 
@@ -16,6 +9,7 @@ struct WKWebViewPractice: UIViewRepresentable {
         guard let url = URL(string: url) else {
             return WKWebView()
         }
+        
         let webView = WKWebView()
 
         webView.load(URLRequest(url: url))
