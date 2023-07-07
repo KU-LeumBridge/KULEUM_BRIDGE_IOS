@@ -1,10 +1,3 @@
-//
-//  NoticeView.swift
-//  KuleumBridge
-//
-//  Created by 최서연 on 2023/07/06.
-//
-
 import SwiftUI
 
 struct NoticeView: View{
@@ -22,7 +15,6 @@ struct NoticeView: View{
                     .shadow(color: Color.pink.opacity(0.45),radius: 4, x: 5, y: 4)
             }
         }
-
     }
 }
 
