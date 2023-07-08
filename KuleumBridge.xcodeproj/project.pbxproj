@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C28CC72A59AE1D00B08B07 /* LoginView.swift */; };
 		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
 		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
 		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23C28CC72A59AE1D00B08B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
 		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
 		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23C28CC62A59AE0600B08B07 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				23C28CC72A59AE1D00B08B07 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		A1F909CB2A54F9C1004559AF = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +76,7 @@
 		A1F909D62A54F9C1004559AF /* KuleumBridge */ = {
 			isa = PBXGroup;
 			children = (
-				A19EAC892A56FE8400FE37CC /* Info.plist */,
+				23C28CC62A59AE0600B08B07 /* Login */,
 				A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */,
 				A1F909D92A54F9C1004559AF /* ContentView.swift */,
 				A11153052A55648A006E2282 /* TastePlaceView.swift */,
@@ -77,6 +87,7 @@
 				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
 				A11153092A558696006E2282 /* FoodListView.swift */,
 				A1F909DB2A54F9C2004559AF /* Assets.xcassets */,
+				A19EAC892A56FE8400FE37CC /* Info.plist */,
 				A1F909DD2A54F9C2004559AF /* Preview Content */,
 			);
 			path = KuleumBridge;
@@ -168,6 +179,7 @@
 				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
 				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,
+				23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */,
 				A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
