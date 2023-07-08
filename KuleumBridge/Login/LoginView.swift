@@ -1,7 +1,16 @@
 import SwiftUI
 
+enum Field {
+    case id
+    case pw
+  }
+
 struct LoginView: View {
     @State var id: String = ""
+    @State var pw: String = ""
+    
+    @FocusState private var focusField: Field?
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -30,18 +39,23 @@ struct LoginView: View {
                         .background(Color(uiColor: .white))
                         .padding([.leading, .trailing], 80)
                         .tint(.black)
+                        .keyboardType(.default)
+                        .focused($focusField, equals: .id)
                     
-                    TextField("PASSWORD", text: $id)
+                    TextField("PASSWORD", text: $pw)
                         .padding([.leading, .top, .bottom], 12)
                         .border(.black, width: 2)
                         .background(Color(uiColor: .white))
                         .padding([.leading, .trailing], 80)
                         .tint(.black)
+                        .keyboardType(.default)
+                        .focused($focusField, equals: .pw)
                     
                     Spacer().frame(height: 30)
                     
                     // ContentView는 임시
                     // TODO: 탭바로 연결하기
+                    // TODO: id, pw가 일치할 경우에만 넘어가도록 처리
                     NavigationLink(destination: ContentView()) {
                         Text("Login")
                             .font(.system(size: 23))
@@ -53,7 +67,16 @@ struct LoginView: View {
                     }
                 }
             }
+        }.onTapGesture {
+            hideKeyboard()
         }
+    }
+}
+
+extension View {
+    // 키보드 바깥 화면을 클릭 시 키보드를 내립니다.
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

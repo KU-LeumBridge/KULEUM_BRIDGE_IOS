@@ -4,7 +4,8 @@ import SwiftUI
 struct KuleumBridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // 앱 실행 시 첫 화면
+            LoginView()
         }
     }
 }
