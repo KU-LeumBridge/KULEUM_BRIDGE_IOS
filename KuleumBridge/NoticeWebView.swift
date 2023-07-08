@@ -24,7 +24,6 @@ struct WKWebViewPractice: UIViewRepresentable {
     }
 }
 
-// http 통신 허용 필요 - ATS의 Allow Arbitary Loads YES 설정
 struct NoticeWebView: View{
     var body: some View{
         WKWebViewPractice(url: "http://www.konkuk.ac.kr/jsp/Plaza/plaza_01_01.jsp")
