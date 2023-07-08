@@ -1,12 +1,11 @@
-import SwiftUI
 import MapKit
+import SwiftUI
 
-struct FoodStoreMapView: View{
-    
+struct FoodStoreMapView: View {
     // 초기 화면 설정: KU시네마파크
     let initLatitude: Double = 37.543250
     let initLongitude: Double = 127.072402
-    
+
     @State private var region: MKCoordinateRegion
 
     init() {
@@ -19,8 +18,8 @@ struct FoodStoreMapView: View{
     }
 }
 
-struct FoodStoreMapView_Previews: PreviewProvider{
-    static var previews: some View{
+struct FoodStoreMapView_Previews: PreviewProvider {
+    static var previews: some View {
         FoodStoreMapView()
     }
 }

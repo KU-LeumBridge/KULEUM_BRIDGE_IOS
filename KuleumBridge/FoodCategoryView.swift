@@ -1,10 +1,9 @@
 import SwiftUI
 
 struct FoodCategoryView: View {
-    
     @State var foodName: String
     @State var foodImage: String
-    
+
     var body: some View {
         VStack {
             NavigationLink(destination: FoodListView(foodName: foodName)) {
