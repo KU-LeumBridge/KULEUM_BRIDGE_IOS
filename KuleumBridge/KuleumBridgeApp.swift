@@ -4,7 +4,7 @@ import SwiftUI
 struct KuleumBridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabbarView()
         }
     }
 }
