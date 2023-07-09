@@ -3,7 +3,7 @@ import SwiftUI
 enum Field {
     case id
     case pw
-  }
+}
 
 struct LoginView: View {
     @State var id: String = ""
