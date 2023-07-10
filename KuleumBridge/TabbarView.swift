@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct TabbarView: View {
+struct TabBarView: View {
     @State private var selectedIdx = 0
 
-    let tabbarText = ["홈", "맛집", "공지사항"]
+    let tabBarText = ["홈", "맛집", "공지사항"]
 
     var body: some View {
         VStack {
@@ -14,8 +14,11 @@ struct TabbarView: View {
                     ContentView()
                 case 1:
                     TastePlaceView()
-                default:
+                case 2:
                     // TODO: 공지사항 뷰 연결
+                    ContentView()
+                default:
+                    // 임의 뷰
                     ContentView()
                 }
             }
@@ -28,17 +31,17 @@ struct TabbarView: View {
 
             HStack {
                 Spacer()
-                ForEach(0 ..< tabbarText.count, id: \.self) { num in
+                ForEach(0 ..< tabBarText.count, id: \.self) { idx in
                     Spacer()
                     VStack {
-                        Text(tabbarText[num])
+                        Text(tabBarText[idx])
                             .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(selectedIdx == num ? Color(.black) : Color(.gray))
+                            .foregroundColor(selectedIdx == idx ? Color(.black) : Color(.gray))
                             .padding(.top, 15)
                     }
                     .gesture(
                         TapGesture().onEnded { _ in
-                            selectedIdx = num
+                            selectedIdx = idx
                         })
                     Spacer()
                 }
@@ -47,8 +50,8 @@ struct TabbarView: View {
     }
 }
 
-struct TabbarView_Previews: PreviewProvider {
+struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabbarView()
+        TabBarView()
     }
 }
