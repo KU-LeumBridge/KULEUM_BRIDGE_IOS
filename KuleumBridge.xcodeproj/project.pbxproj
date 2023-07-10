@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E494F12A5A9A3100A196B9 /* TabBarView.swift */; };
 		23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C28CC72A59AE1D00B08B07 /* LoginView.swift */; };
 		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
 		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23E494F12A5A9A3100A196B9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		23C28CC72A59AE1D00B08B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
 		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
 				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
 				A11153092A558696006E2282 /* FoodListView.swift */,
+				23E494F12A5A9A3100A196B9 /* TabBarView.swift */,
 				A1F909DB2A54F9C2004559AF /* Assets.xcassets */,
 				A19EAC892A56FE8400FE37CC /* Info.plist */,
 				A1F909DD2A54F9C2004559AF /* Preview Content */,
@@ -179,6 +183,7 @@
 				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
 				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,
+				23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */,
 				23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */,
 				A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */,
 			);
