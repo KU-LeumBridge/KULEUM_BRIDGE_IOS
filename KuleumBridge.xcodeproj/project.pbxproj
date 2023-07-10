@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E494F12A5A9A3100A196B9 /* TabBarView.swift */; };
 		23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C28CC72A59AE1D00B08B07 /* LoginView.swift */; };
+		23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E494F12A5A9A3100A196B9 /* TabBarView.swift */; };
 		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
 		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
 		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
@@ -24,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23E494F12A5A9A3100A196B9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		23C28CC72A59AE1D00B08B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		23E494F12A5A9A3100A196B9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
 		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
 		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -60,6 +59,27 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A1309A642A5C5245004C2120 /* TastePlace */ = {
+			isa = PBXGroup;
+			children = (
+				A11153052A55648A006E2282 /* TastePlaceView.swift */,
+				A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */,
+				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
+				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
+				A11153092A558696006E2282 /* FoodListView.swift */,
+			);
+			path = TastePlace;
+			sourceTree = "<group>";
+		};
+		A1309A652A5C526B004C2120 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A19EAC852A56F2B700FE37CC /* NoticeView.swift */,
+				A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
 		A1F909CB2A54F9C1004559AF = {
 			isa = PBXGroup;
 			children = (
@@ -79,16 +99,11 @@
 		A1F909D62A54F9C1004559AF /* KuleumBridge */ = {
 			isa = PBXGroup;
 			children = (
+				A1309A652A5C526B004C2120 /* Notice */,
+				A1309A642A5C5245004C2120 /* TastePlace */,
 				23C28CC62A59AE0600B08B07 /* Login */,
 				A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */,
 				A1F909D92A54F9C1004559AF /* ContentView.swift */,
-				A11153052A55648A006E2282 /* TastePlaceView.swift */,
-				A19EAC852A56F2B700FE37CC /* NoticeView.swift */,
-				A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */,
-				A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */,
-				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
-				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
-				A11153092A558696006E2282 /* FoodListView.swift */,
 				23E494F12A5A9A3100A196B9 /* TabBarView.swift */,
 				A1F909DB2A54F9C2004559AF /* Assets.xcassets */,
 				A19EAC892A56FE8400FE37CC /* Info.plist */,
