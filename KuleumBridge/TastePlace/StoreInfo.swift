@@ -6,13 +6,18 @@ struct StoreInfo: View {
     let initLongitude: Double = 127.072402
 
     @State private var region: MKCoordinateRegion
+    @State private var showingAlert = false
 
     init() {
         _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: initLatitude, longitude: initLongitude), span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)))
     }
     
     var body: some View {
+        // @State var showingAlert = false
+        
         VStack {
+            Spacer().frame(height: 20)
+            
             Text("환이네 갈비살 본점")
                 .font(.system(size: 30))
                 .fontWeight(.black)
@@ -26,23 +31,30 @@ struct StoreInfo: View {
             // 1. 가게 이름, 주소 왼쪽 정렬 구현하기.
             
             Map(coordinateRegion: $region)
-                .padding()
+                .padding(20)
             // 1. 맵에 해당 가게의 위치 픽커로 표시하기.
             
             HStack(alignment: .center) {
                 Button(action: {
-                    print("우하하")
+                    showingAlert = true
                     // 1. 주소 복사 기능 구현
-                    // 2. 주소 복사가 되었음을 알리는 alert 기능 구현
+                    
                 }) {
                     Text("주소 복사")
                         .padding()
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
                         .background(Color.orange)
-                        .cornerRadius(20)
+                        .cornerRadius(10)
                         .shadow(radius: 5, x: 5, y: 5)
                 }
+                .alert(isPresented: $showingAlert) {
+                    Alert(
+                        title: Text("주소 복사 완료")
+                    )
+                }
+                
+                Spacer().frame(width: 20)
                 
                 Button(action: {
                     print("우하하")
@@ -53,7 +65,8 @@ struct StoreInfo: View {
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
                         .background(Color.orange)
-                        .cornerRadius(20)
+                        .cornerRadius(10)
+                        .shadow(radius: 5, x: 5, y: 5)
                 }
             }
         }
