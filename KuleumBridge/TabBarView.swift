@@ -13,10 +13,11 @@ struct TabBarView: View {
                     // TODO: 홈 뷰 연결
                     ContentView()
                 case 1:
+                    // 맛집 탭
                     TastePlaceView()
                 case 2:
-                    // TODO: 공지사항 뷰 연결
-                    ContentView()
+                    // 공지사항 탭
+                    NoticeView()
                 default:
                     // 임의 뷰
                     ContentView()

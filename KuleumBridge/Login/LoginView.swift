@@ -56,7 +56,7 @@ struct LoginView: View {
                     // ContentView는 임시
                     // TODO: 탭바로 연결하기
                     // TODO: id, pw가 일치할 경우에만 넘어가도록 처리
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: TabBarView()) {
                         Text("Login")
                             .font(.system(size: 23))
                             .foregroundColor(.white)
