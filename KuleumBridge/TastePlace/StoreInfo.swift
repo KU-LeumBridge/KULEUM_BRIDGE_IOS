@@ -58,7 +58,6 @@ struct StoreInfo: View {
                     Spacer().frame(width: 20)
                     
                     Button(action: {
-                        print("우하하")
                         // 1. 클릭 시 지도 앱으로 이동
                     }) {
                         Text("지도 앱에서 찾기")
