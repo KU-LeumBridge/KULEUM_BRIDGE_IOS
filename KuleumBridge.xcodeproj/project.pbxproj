@@ -53,6 +53,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233C2C0C2A678EB500362992 /* TastePlace */ = {
+			isa = PBXGroup;
+			children = (
+				A11153092A558696006E2282 /* FoodListView.swift */,
+				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
+				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
+				A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */,
+				A11153052A55648A006E2282 /* TastePlaceView.swift */,
+			);
+			path = TastePlace;
+			sourceTree = "<group>";
+		};
+		233C2C0D2A678EEF00362992 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */,
+				A19EAC852A56F2B700FE37CC /* NoticeView.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
 		23C28CC62A59AE0600B08B07 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +126,11 @@
 				A1309A652A5C526B004C2120 /* Notice */,
 				A1309A642A5C5245004C2120 /* TastePlace */,
 				23C28CC62A59AE0600B08B07 /* Login */,
+				233C2C0C2A678EB500362992 /* TastePlace */,
+				233C2C0D2A678EEF00362992 /* Notice */,
+				23E494F12A5A9A3100A196B9 /* TabBarView.swift */,
 				A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */,
 				A1F909D92A54F9C1004559AF /* ContentView.swift */,
-				23E494F12A5A9A3100A196B9 /* TabBarView.swift */,
 				A1F909DB2A54F9C2004559AF /* Assets.xcassets */,
 				A19EAC892A56FE8400FE37CC /* Info.plist */,
 				A1F909DD2A54F9C2004559AF /* Preview Content */,
