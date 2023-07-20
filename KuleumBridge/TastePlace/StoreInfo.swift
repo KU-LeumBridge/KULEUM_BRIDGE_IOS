@@ -74,7 +74,7 @@ struct StoreInfo: View {
     }
 }
 
-// 해당 뷰 : 리스트 클릭 시 이동하도록 네비게이션 구현하기 .
+// TODO: 리스트 클릭 시 이동하도록 네비게이션 구현하기 .
 
 struct StoreInfo_Previews: PreviewProvider {
     static var previews: some View {
