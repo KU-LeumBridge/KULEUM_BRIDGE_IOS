@@ -33,13 +33,12 @@ struct StoreInfo: View {
                 Map(coordinateRegion: $region)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 15)
-                // 맵에 해당 가게의 위치 픽커로 표시하기.
+                // TODO: 맵에 해당 가게의 위치 픽커로 표시하기.
                 
                 HStack {
                     Button(action: {
                         showingAlert = true
-                        // 주소 복사 기능 구현
-                        
+                        // TODO: 주소 복사 기능 구현
                     }) {
                         Text("주소 복사")
                             .padding()
@@ -56,7 +55,7 @@ struct StoreInfo: View {
                     Spacer().frame(width: 20)
                     
                     Button(action: {
-                        // 클릭 시 지도 앱으로 이동
+                        // TODO: 클릭 시 지도 앱으로 이동
                     }) {
                         Text("지도 앱에서 찾기")
                             .padding()

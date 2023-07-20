@@ -8,7 +8,7 @@ struct FoodListView: View {
                 ForEach(1 ... 20, id: \.self) { _ in
                     FoodStoreInfoData()
                         .padding(.vertical, 10)
-                    // 카테고리별 가게 리스트 데이터 필요
+                    // TODO: 카테고리별 가게 리스트 데이터 필요
                 }
             }
         }
