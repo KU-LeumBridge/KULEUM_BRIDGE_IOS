@@ -49,10 +49,8 @@ struct StoreInfo: View {
                             .cornerRadius(10)
                             .shadow(radius: 5, x: 5, y: 5)
                     }
-                    .alert(isPresented: $showingAlert) {
-                        Alert(
-                            title: Text("주소가 복사되었습니다.")
-                        )
+                    .alert("주소 복사가 완료되었습니다.", isPresented: $showingAlert) {
+                        Button("OK", role: .none) {}
                     }
                     
                     Spacer().frame(width: 20)
