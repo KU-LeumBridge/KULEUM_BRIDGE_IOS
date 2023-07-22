@@ -1,30 +1,26 @@
 import SwiftUI
 
 struct FoodStoreInfoData: View {
+    var store: Store
     var body: some View {
         HStack {
-            Image("burgerking")
-                .resizable()
-                .frame(width: 90, height: 90)
-                .padding(.horizontal, 15)
-
-            VStack(alignment: .center) {
-                Text("버거킹 건대입구역점")
+            VStack(alignment: .trailing) {
+                Text(store.storeName)
                     .font(.system(size: 21))
                     .fontWeight(.black)
 
                 Spacer().frame(height: 7)
 
-                Text("서울특별시 광진구 화양동 아차산로 229")
+                Text(store.oneLineReview)
                     .frame(maxWidth: .infinity, alignment: .trailing)
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
+                    .font(.system(size: 14))
 
                 Spacer().frame(height: 3)
 
-                Text("항상 패티 뜨겁고 감튀 바삭해서 좋네요😋👍")
+                Text(store.address)
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .font(.system(size: 13))
+                    .foregroundColor(.secondary)
             }
             .padding(.leading, 10)
             .padding(.trailing, 15)
@@ -36,6 +32,6 @@ struct FoodStoreInfoData: View {
 
 struct FoodStoreInfoData_Previews: PreviewProvider {
     static var previews: some View {
-        FoodStoreInfoData()
+        FoodStoreInfoData(store: Store(category: "한식", storeName: "배고픈 밥집", address: "서초대로29길 23-8 201호", latitude: 12.34243, longitude: 543.341, oneLineReview: "개존맛탱구리구리너구리", id: 1))
     }
 }
