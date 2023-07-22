@@ -2,17 +2,18 @@ import SwiftUI
 
 struct FoodCategoryView: View {
     @State var category: String
+    @State var categoryName: String
     @State var foodImage: String
 
     var body: some View {
         VStack {
-            NavigationLink(destination: FoodListView(category: category)) {
+            NavigationLink(destination: FoodListView(category: category, categoryName: categoryName)) {
                 Image(foodImage)
                     .resizable()
                     .frame(width: 75, height: 75)
                     .shadow(radius: 6, x: 5, y: 5)
             }
-            Text(category)
+            Text(categoryName)
                 .foregroundColor(.black)
                 .font(.system(size: 15))
                 .fontWeight(.bold)
@@ -23,6 +24,6 @@ struct FoodCategoryView: View {
 
 struct FoodCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodCategoryView(category: "한식", foodImage: "koreanfood")
+        FoodCategoryView(category: "한식", categoryName: "한식", foodImage: "koreanfood")
     }
 }
