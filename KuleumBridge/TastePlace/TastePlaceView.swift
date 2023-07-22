@@ -5,21 +5,21 @@ struct TastePlaceView: View {
         NavigationStack {
             VStack(spacing: 20) {
                 HStack(spacing: 30) {
-                    FoodCategoryView(category: "한식", foodImage: "koreanfood")
-                    FoodCategoryView(category: "분식", foodImage: "tteok")
-                    FoodCategoryView(category: "카페", foodImage: "expresso")
+                    FoodCategoryView(category: "한식", categoryName: "한식",foodImage: "koreanfood")
+                    FoodCategoryView(category: "분식", categoryName: "분식",foodImage: "tteok")
+                    FoodCategoryView(category: "디저트", categoryName: "커피&디저트",foodImage: "expresso")
                 }
 
                 HStack(spacing: 30) {
-                    FoodCategoryView(category: "일식", foodImage: "sushi")
-                    FoodCategoryView(category: "패스트푸드", foodImage: "hamburger")
-                    FoodCategoryView(category: "아시안/양식", foodImage: "asian")
+                    FoodCategoryView(category: "일식", categoryName: "일식",foodImage: "sushi")
+                    FoodCategoryView(category: "치킨_햄버거", categoryName: "패스트푸드",foodImage: "hamburger")
+                    FoodCategoryView(category: "양식", categoryName: "아시안&양식",foodImage: "asian")
                 }
 
                 HStack(spacing: 30) {
-                    FoodCategoryView(category: "중식", foodImage: "dimsum")
-                    FoodCategoryView(category: "고깃집", foodImage: "meat")
-                    FoodCategoryView(category: "술집", foodImage: "soju")
+                    FoodCategoryView(category: "중식", categoryName: "중식",foodImage: "dimsum")
+                    FoodCategoryView(category: "고기", categoryName: "고깃집",foodImage: "meat")
+                    FoodCategoryView(category: "술집", categoryName: "술집",foodImage: "soju")
                 }
             }
 

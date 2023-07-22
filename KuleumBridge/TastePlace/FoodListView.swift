@@ -2,18 +2,22 @@ import SwiftUI
 
 struct FoodListView: View {
     @State var category: String
+    @State var categoryName: String
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .center) {
                 ForEach(viewModel.stores, id: \.self) { store in
-                    FoodStoreInfoData(store: store)
-                        .padding(.vertical, 10)
+                    if(store.category == category) {
+                        FoodStoreInfoData(store: store)
+                            .padding(.vertical, 10)
+                    }
+                        
                 }
             }
         }
-        .navigationTitle(category)
+        .navigationTitle(categoryName)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.fetch()
@@ -23,6 +27,6 @@ struct FoodListView: View {
 
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView(category: "한식")
+        FoodListView(category: "한식", categoryName: "한식")
     }
 }
