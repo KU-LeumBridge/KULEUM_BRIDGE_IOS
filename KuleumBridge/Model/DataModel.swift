@@ -1,6 +1,6 @@
 import Foundation
 
-enum Category: Codable {
+enum Category: String, CaseIterable, Codable {
     case 한식
     case 분식
     case 디저트
@@ -12,8 +12,12 @@ enum Category: Codable {
     case 술집
 }
 
+func isEqualToCategory(_ inputString: String, category: Category) -> Bool {
+    return inputString == category.rawValue
+}
+
 struct Store: Codable, Hashable {
-    let category: String // TODO: enum으로 변경할 예정
+    let category: String
     let storeName: String
     let address: String
     let latitude: Double
@@ -21,4 +25,3 @@ struct Store: Codable, Hashable {
     let oneLineReview: String
     let id: Int
 }
-

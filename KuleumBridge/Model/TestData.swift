@@ -39,7 +39,6 @@ struct TestData: View {
                     VStack {
                         Text(store.storeName)
                         Text(store.address)
-                        Text(store.category)
                         Text("\(store.latitude)")
                         Text("\(store.longitude)")
                         Text(store.oneLineReview)

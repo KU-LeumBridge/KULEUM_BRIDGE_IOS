@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FoodListView: View {
-    @State var category: String
+    @State var category: Category  // enum
     @State var categoryName: String
     @StateObject var viewModel = ViewModel()
 
@@ -9,11 +9,10 @@ struct FoodListView: View {
         ScrollView {
             LazyVStack(alignment: .center) {
                 ForEach(viewModel.stores, id: \.self) { store in
-                    if(store.category == category) {
+                    if  isEqualToCategory(store.category, category: category) {
                         FoodStoreInfoData(store: store)
                             .padding(.vertical, 10)
                     }
-                        
                 }
             }
         }
@@ -27,6 +26,6 @@ struct FoodListView: View {
 
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView(category: "한식", categoryName: "한식")
+        FoodListView(category: .한식, categoryName: "한식")
     }
 }
