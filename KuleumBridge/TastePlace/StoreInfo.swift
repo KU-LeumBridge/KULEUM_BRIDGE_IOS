@@ -2,14 +2,15 @@ import MapKit
 import SwiftUI
 
 struct StoreInfo: View {
-    let initLatitude: Double = 37.543250
-    let initLongitude: Double = 127.072402
+    var store: Store
 
     @State private var region: MKCoordinateRegion
     @State private var showingAlert = false
 
-    init() {
-        _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: initLatitude, longitude: initLongitude), span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)))
+    init(store: Store) {
+        self.store = store
+        
+        _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: store.latitude, longitude: store.longitude), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)))
     }
     
     var body: some View {
@@ -17,13 +18,13 @@ struct StoreInfo: View {
             VStack(alignment: .leading) {
                 Spacer().frame(height: 20)
             
-                Text("환이네 갈비살 본점")
+                Text(store.storeName)
                     .font(.system(size: 30))
                     .fontWeight(.black)
             
                 Spacer().frame(height: 15)
             
-                Text("서울 광진구 아차산로29길 24 1층")
+                Text(store.address)
                     .font(.system(size: 20))
                     .fontWeight(.medium)
             }
@@ -71,10 +72,9 @@ struct StoreInfo: View {
     }
 }
 
-// TODO: 리스트 클릭 시 이동하도록 네비게이션 구현하기 .
-
 struct StoreInfo_Previews: PreviewProvider {
     static var previews: some View {
-        StoreInfo()
+        let store = Store(category: "한식", storeName: "배고픈 밥집", address: "서초대로29길 23-8 201호", latitude: 12.34243, longitude: 543.341, oneLineReview: "개존맛탱구리구리너구리", id: 1)
+        StoreInfo(store: store)
     }
 }
