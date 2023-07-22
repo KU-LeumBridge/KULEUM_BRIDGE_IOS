@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FoodCategoryView: View {
-    @State var category: String
+    @State var category: Category
     @State var categoryName: String
     @State var foodImage: String
 
@@ -24,6 +24,6 @@ struct FoodCategoryView: View {
 
 struct FoodCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodCategoryView(category: "한식", categoryName: "한식", foodImage: "koreanfood")
+        FoodCategoryView(category: .한식, categoryName: "한식", foodImage: "koreanfood")
     }
 }
