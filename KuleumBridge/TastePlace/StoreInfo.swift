@@ -74,7 +74,7 @@ struct StoreInfo: View {
 
 struct StoreInfo_Previews: PreviewProvider {
     static var previews: some View {
-        let store = Store(category: "한식", storeName: "배고픈 밥집", address: "서초대로29길 23-8 201호", latitude: 12.34243, longitude: 543.341, oneLineReview: "개존맛탱구리구리너구리", id: 1)
+        let store = Store(category: "한식", storeName: "배고픈 밥집", address: "서초대로29길 23-8 201호", latitude: 37.54282, longitude: 127.06779, oneLineReview: "개존맛탱구리구리너구리", id: 1)
         StoreInfo(store: store)
     }
 }

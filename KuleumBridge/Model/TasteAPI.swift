@@ -2,7 +2,6 @@ import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var stores = [Store]()
-    // @Published: 데이터 변경 시 자동으로 View가 업데이트되도록 함.
 
     func fetch() {
         guard let url = URL(string: "https://kuleum-bridge-server.fly.dev/api/foods")
