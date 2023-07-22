@@ -28,6 +28,7 @@ class ViewModel: ObservableObject {
     }
 }
 
+// 데이터값이 잘들어왔는지 확인하기 위한 임시 뷰
 struct TestData: View {
     @StateObject var viewModel = ViewModel()
 
