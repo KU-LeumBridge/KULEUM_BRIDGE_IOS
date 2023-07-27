@@ -17,13 +17,13 @@ struct StoreInfo: View {
         VStack {
             VStack(alignment: .leading) {
                 Spacer().frame(height: 20)
-            
+                
                 Text(store.storeName)
                     .font(.system(size: 30))
                     .fontWeight(.black)
-            
+                
                 Spacer().frame(height: 15)
-            
+                
                 Text(store.address)
                     .font(.system(size: 20))
                     .fontWeight(.medium)
@@ -31,10 +31,15 @@ struct StoreInfo: View {
             .padding(.trailing, 80)
             
             VStack {
-                Map(coordinateRegion: $region)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 15)
-                // TODO: 맵에 해당 가게의 위치 픽커로 표시하기.
+                Map(coordinateRegion: $region, annotationItems: [store]) { store in
+                    MapAnnotation(coordinate: store.coordinate) {
+                        Image("location-pin")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                    }
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 15)
                 
                 HStack {
                     Button(action: {
