@@ -11,21 +11,21 @@ struct TastePlaceView: View {
 
                 VStack(spacing: 20) {
                     HStack(spacing: 30) {
-                        FoodCategoryView(category: .한식, foodImage: "koreanfood")
-                        FoodCategoryView(category: .분식, foodImage: "tteok")
-                        FoodCategoryView(category: .디저트, foodImage: "expresso")
+                        FoodCategoryView(category: .한식)
+                        FoodCategoryView(category: .분식)
+                        FoodCategoryView(category: .디저트)
                     }
 
                     HStack(spacing: 30) {
-                        FoodCategoryView(category: .일식, foodImage: "sushi")
-                        FoodCategoryView(category: .치킨_햄버거, foodImage: "hamburger")
-                        FoodCategoryView(category: .양식, foodImage: "asian")
+                        FoodCategoryView(category: .일식)
+                        FoodCategoryView(category: .치킨_햄버거)
+                        FoodCategoryView(category: .양식)
                     }
 
                     HStack(spacing: 30) {
-                        FoodCategoryView(category: .중식, foodImage: "dimsum")
-                        FoodCategoryView(category: .고기, foodImage: "meat")
-                        FoodCategoryView(category: .술집, foodImage: "soju")
+                        FoodCategoryView(category: .중식)
+                        FoodCategoryView(category: .고기)
+                        FoodCategoryView(category: .술집)
                     }
 
                     Spacer().frame(height: 30)

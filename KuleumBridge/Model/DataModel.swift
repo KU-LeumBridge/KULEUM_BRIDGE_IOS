@@ -1,5 +1,6 @@
 import CoreLocation
 import Foundation
+import SwiftUI
 
 enum Category: String, CaseIterable, Codable {
     case 한식
@@ -23,6 +24,20 @@ enum Category: String, CaseIterable, Codable {
         case .중식: return "중식"
         case .고기: return "고깃집"
         case .술집: return "술집"
+        }
+    }
+
+    var image: String {
+        switch self {
+        case .한식: return "koreanfood"
+        case .분식: return "tteok"
+        case .디저트: return "expresso"
+        case .일식: return "sushi"
+        case .치킨_햄버거: return "hamburger"
+        case .양식: return "asian"
+        case .중식: return "dimsum"
+        case .고기: return "meat"
+        case .술집: return "soju"
         }
     }
 }

@@ -2,19 +2,28 @@ import MapKit
 import SwiftUI
 
 struct FoodStoreMapView: View {
-    // 초기 화면 설정: KU시네마파크
     let initLatitude: Double = 37.543250
     let initLongitude: Double = 127.072402
 
     @State private var region: MKCoordinateRegion
+    @StateObject var viewModel = ViewModel()
 
     init() {
         _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: initLatitude, longitude: initLongitude), span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)))
     }
 
     var body: some View {
-        Map(coordinateRegion: $region)
-            .ignoresSafeArea(.all, edges: .bottom)
+        Map(coordinateRegion: $region, annotationItems: viewModel.stores) { store in
+            MapAnnotation(coordinate: store.coordinate) {
+                Image(store.category.image)
+                    .resizable()
+                    .frame(width: 35, height: 35)
+            }
+        }
+        .ignoresSafeArea(.all, edges: .bottom)
+        .onAppear {
+            viewModel.fetch()
+        }
     }
 }
 
