@@ -2,12 +2,11 @@ import SwiftUI
 
 struct FoodListView: View {
     @State var category: Category
-    @State var categoryName: String
     @StateObject var viewModel = ViewModel()
 
     var filteredStores: [Store] {
         viewModel.stores.filter { store in
-            store.category == categoryName
+            store.category == category.rawValue
         }
     }
 
@@ -25,7 +24,7 @@ struct FoodListView: View {
             }
         }
 
-        .navigationTitle(categoryName)
+        .navigationTitle(category.title)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             viewModel.fetch()
@@ -35,6 +34,6 @@ struct FoodListView: View {
 
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView(category: .한식, categoryName: "한식")
+        FoodListView(category: .고기)
     }
 }
