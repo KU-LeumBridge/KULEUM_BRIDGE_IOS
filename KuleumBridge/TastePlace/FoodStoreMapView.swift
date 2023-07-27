@@ -7,6 +7,7 @@ struct FoodStoreMapView: View {
 
     @State private var region: MKCoordinateRegion
     @StateObject var viewModel = ViewModel()
+    @State private var selectedStore: Store?
 
     init() {
         _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: initLatitude, longitude: initLongitude), span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)))
@@ -15,12 +16,19 @@ struct FoodStoreMapView: View {
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: viewModel.stores) { store in
             MapAnnotation(coordinate: store.coordinate) {
-                Image(store.category.image)
-                    .resizable()
-                    .frame(width: 35, height: 35)
+                Button(action: {
+                    selectedStore = store
+                }) {
+                    Image(store.category.image)
+                        .resizable()
+                        .frame(width: 35, height: 35)
+                }
             }
         }
         .ignoresSafeArea(.all, edges: .bottom)
+        .sheet(item: $selectedStore) { store in
+            StoreInfo(store: store)
+        }
         .onAppear {
             viewModel.fetch()
         }
