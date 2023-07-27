@@ -13,6 +13,12 @@ struct StoreInfo: View {
         _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: store.latitude, longitude: store.longitude), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)))
     }
     
+    func openExternalMap() {
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: store.coordinate))
+        mapItem.name = store.storeName
+        mapItem.openInMaps(launchOptions: nil)
+    }
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -61,7 +67,7 @@ struct StoreInfo: View {
                     Spacer().frame(width: 20)
                     
                     Button(action: {
-                        // TODO: 클릭 시 지도 앱으로 이동
+                        openExternalMap()
                     }) {
                         Text("지도 앱에서 찾기")
                             .padding()
