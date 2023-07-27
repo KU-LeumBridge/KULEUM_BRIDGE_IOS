@@ -1,24 +1,39 @@
 import SwiftUI
 
 struct FoodListView: View {
-    @State var foodName: String
+    @State var category: Category
+    @StateObject var viewModel = ViewModel()
+
+    var filteredStores: [Store] {
+        viewModel.stores.filter { store in
+            store.category == category
+        }
+    }
+
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .center) {
-                ForEach(1 ... 20, id: \.self) { _ in
-                    FoodStoreInfoData()
-                        .padding(.vertical, 10)
-                    // TODO: 카테고리별 가게 리스트 데이터 필요
+                ForEach(filteredStores, id: \.self) { store in
+                    NavigationLink {
+                        StoreInfo(store: store)
+                    } label: {
+                        FoodStoreInfoData(store: store)
+                    }
+                    .tint(.black)
                 }
             }
         }
-        .navigationTitle(foodName)
+
+        .navigationTitle(category.title)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            viewModel.fetch()
+        }
     }
 }
 
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodListView(foodName: "한식")
+        FoodListView(category: .고기)
     }
 }
