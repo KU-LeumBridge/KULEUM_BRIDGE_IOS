@@ -38,8 +38,8 @@ struct StoreInfo: View {
                 
                 HStack {
                     Button(action: {
+                        UIPasteboard.general.string = store.address
                         showingAlert = true
-                        // TODO: 주소 복사 기능 구현
                     }) {
                         Text("주소 복사")
                             .padding()
