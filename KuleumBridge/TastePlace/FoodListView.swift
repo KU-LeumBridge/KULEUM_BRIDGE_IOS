@@ -6,7 +6,7 @@ struct FoodListView: View {
 
     var filteredStores: [Store] {
         viewModel.stores.filter { store in
-            store.category == category.rawValue
+            store.category == category
         }
     }
 

@@ -27,7 +27,7 @@ enum Category: String, CaseIterable, Codable {
 }
 
 struct Store: Codable, Hashable {
-    let category: String
+    let category: Category
     let storeName: String
     let address: String
     let latitude: Double
