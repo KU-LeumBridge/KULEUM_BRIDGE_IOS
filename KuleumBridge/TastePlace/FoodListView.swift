@@ -7,7 +7,7 @@ struct FoodListView: View {
 
     var filteredStores: [Store] {
         viewModel.stores.filter { store in
-            isEqualToCategory(store.category, category: category)
+            store.category == categoryName
         }
     }
 

@@ -12,10 +12,6 @@ enum Category: String, CaseIterable, Codable {
     case 술집
 }
 
-func isEqualToCategory(_ inputString: String, category: Category) -> Bool {
-    return inputString == category.rawValue
-}
-
 struct Store: Codable, Hashable {
     let category: String
     let storeName: String
