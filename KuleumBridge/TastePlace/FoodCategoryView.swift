@@ -13,7 +13,7 @@ struct FoodCategoryView: View {
                     .shadow(radius: 6, x: 5, y: 5)
             }
             Text(category.title)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .font(.system(size: 15))
                 .fontWeight(.bold)
                 .padding(7)

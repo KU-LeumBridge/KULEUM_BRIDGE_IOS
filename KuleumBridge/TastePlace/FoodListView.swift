@@ -11,23 +11,30 @@ struct FoodListView: View {
     }
 
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .center) {
-                ForEach(filteredStores, id: \.self) { store in
-                    NavigationLink {
-                        StoreInfo(store: store)
-                    } label: {
-                        FoodStoreInfoData(store: store)
+        ZStack {
+            Image("background_img")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+
+            ScrollView {
+                LazyVStack(alignment: .center) {
+                    ForEach(filteredStores, id: \.self) { store in
+                        NavigationLink {
+                            StoreInfo(store: store)
+                        } label: {
+                            FoodStoreInfoData(store: store)
+                        }
+                        .tint(.black)
                     }
-                    .tint(.black)
                 }
             }
-        }
 
-        .navigationTitle(category.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            viewModel.fetch()
+            .navigationTitle(category.title)
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                viewModel.fetch()
+            }
         }
     }
 }

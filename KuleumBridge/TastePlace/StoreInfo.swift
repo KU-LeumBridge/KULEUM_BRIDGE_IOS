@@ -20,62 +20,71 @@ struct StoreInfo: View {
     }
     
     var body: some View {
-        VStack {
-            VStack(alignment: .leading) {
-                Spacer().frame(height: 20)
-                
-                Text(store.storeName)
-                    .font(.system(size: 30))
-                    .fontWeight(.black)
-                
-                Spacer().frame(height: 15)
-                
-                Text(store.address)
-                    .font(.system(size: 20))
-                    .fontWeight(.medium)
-            }
-            .padding(.trailing, 80)
+        ZStack {
+            Image("background_img")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
             
             VStack {
-                Map(coordinateRegion: $region, annotationItems: [store]) { store in
-                    MapAnnotation(coordinate: store.coordinate) {
-                        Image("location-pin")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
+                VStack(alignment: .leading) {
+                    Spacer().frame(height: 20)
+                    
+                    Text(store.storeName)
+                        .font(.system(size: 30))
+                        .fontWeight(.black)
+                        .foregroundColor(.white)
+                    
+                    Spacer().frame(height: 15)
+                    
+                    Text(store.address)
+                        .font(.system(size: 20))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 15)
+                .padding(.trailing, 80)
                 
-                HStack {
-                    Button(action: {
-                        UIPasteboard.general.string = store.address
-                        showingAlert = true
-                    }) {
-                        Text("주소 복사")
-                            .padding()
-                            .foregroundColor(.white)
-                            .fontWeight(.heavy)
-                            .background(Color.orange)
-                            .cornerRadius(10)
-                            .shadow(radius: 5, x: 5, y: 5)
+                VStack {
+                    Map(coordinateRegion: $region, annotationItems: [store]) { store in
+                        MapAnnotation(coordinate: store.coordinate) {
+                            Image("location-pin")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
                     }
-                    .alert("주소 복사가 완료되었습니다.", isPresented: $showingAlert) {
-                        Button("OK", role: .none) {}
-                    }
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 15)
                     
-                    Spacer().frame(width: 20)
-                    
-                    Button(action: {
-                        openExternalMap()
-                    }) {
-                        Text("지도 앱에서 찾기")
-                            .padding()
-                            .foregroundColor(.white)
-                            .fontWeight(.heavy)
-                            .background(Color.orange)
-                            .cornerRadius(10)
-                            .shadow(radius: 5, x: 5, y: 5)
+                    HStack {
+                        Button(action: {
+                            UIPasteboard.general.string = store.address
+                            showingAlert = true
+                        }) {
+                            Text("주소 복사")
+                                .padding()
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .background(Color.orange)
+                                .cornerRadius(10)
+                                .shadow(radius: 5, x: 5, y: 5)
+                        }
+                        .alert("주소 복사가 완료되었습니다.", isPresented: $showingAlert) {
+                            Button("OK", role: .none) {}
+                        }
+                        
+                        Spacer().frame(width: 20)
+                        
+                        Button(action: {
+                            openExternalMap()
+                        }) {
+                            Text("지도 앱에서 찾기")
+                                .padding()
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .background(Color.orange)
+                                .cornerRadius(10)
+                                .shadow(radius: 5, x: 5, y: 5)
+                        }
                     }
                 }
             }
