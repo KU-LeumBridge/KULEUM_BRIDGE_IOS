@@ -17,6 +17,7 @@
 		A1309A672A5C53D3004C2120 /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1309A662A5C53D3004C2120 /* StoreInfo.swift */; };
 		A134D0322A6ACB4C00B112D4 /* TasteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D0312A6ACB4C00B112D4 /* TasteAPI.swift */; };
 		A134D0342A6ACC1B00B112D4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D0332A6ACC1B00B112D4 /* DataModel.swift */; };
+		A15A2A882A7269B300A6ADDF /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A2A872A7269B300A6ADDF /* PlaceAnnotationView.swift */; };
 		A19EAC862A56F2B700FE37CC /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19EAC852A56F2B700FE37CC /* NoticeView.swift */; };
 		A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */; };
 		A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F909D72A54F9C1004559AF /* KuleumBridgeApp.swift */; };
@@ -36,6 +37,7 @@
 		A1309A662A5C53D3004C2120 /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
 		A134D0312A6ACB4C00B112D4 /* TasteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteAPI.swift; sourceTree = "<group>"; };
 		A134D0332A6ACC1B00B112D4 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A15A2A872A7269B300A6ADDF /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		A19EAC852A56F2B700FE37CC /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		A19EAC872A56F82E00FE37CC /* NoticeWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeWebView.swift; sourceTree = "<group>"; };
 		A19EAC892A56FE8400FE37CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				A11153072A556FDD006E2282 /* FoodCategoryView.swift */,
 				A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */,
 				A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */,
+				A15A2A872A7269B300A6ADDF /* PlaceAnnotationView.swift */,
 				A11153052A55648A006E2282 /* TastePlaceView.swift */,
 			);
 			path = TastePlace;
@@ -215,6 +218,7 @@
 				A134D0322A6ACB4C00B112D4 /* TasteAPI.swift in Sources */,
 				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
 				A134D0342A6ACC1B00B112D4 /* DataModel.swift in Sources */,
+				A15A2A882A7269B300A6ADDF /* PlaceAnnotationView.swift in Sources */,
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
 				A1309A672A5C53D3004C2120 /* StoreInfo.swift in Sources */,
 				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,

@@ -16,13 +16,7 @@ struct FoodStoreMapView: View {
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: viewModel.stores) { store in
             MapAnnotation(coordinate: store.coordinate) {
-                Button(action: {
-                    selectedStore = store
-                }) {
-                    Image(store.category.image)
-                        .resizable()
-                        .frame(width: 35, height: 35)
-                }
+                PlaceAnnotationView(store: store)
             }
         }
         .ignoresSafeArea(.all, edges: .bottom)
