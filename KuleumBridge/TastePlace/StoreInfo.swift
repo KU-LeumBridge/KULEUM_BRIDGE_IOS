@@ -19,6 +19,10 @@ struct StoreInfo: View {
         mapItem.openInMaps(launchOptions: nil)
     }
     
+    func copyAddressToClipboard() {
+        UIPasteboard.general.string = store.address
+    }
+    
     var body: some View {
         ZStack {
             Image("background_img")
@@ -57,7 +61,7 @@ struct StoreInfo: View {
                     
                     HStack {
                         Button(action: {
-                            UIPasteboard.general.string = store.address
+                            copyAddressToClipboard()
                             showingAlert = true
                         }) {
                             Text("주소 복사")
