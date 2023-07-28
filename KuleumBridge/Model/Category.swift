@@ -1,6 +1,4 @@
-import CoreLocation
 import Foundation
-import SwiftUI
 
 enum Category: String, CaseIterable, Codable {
     case 한식
@@ -39,19 +37,5 @@ enum Category: String, CaseIterable, Codable {
         case .고기: return "meat"
         case .술집: return "soju"
         }
-    }
-}
-
-struct Store: Codable, Hashable, Identifiable {
-    let category: Category
-    let storeName: String
-    let address: String
-    let latitude: Double
-    let longitude: Double
-    let oneLineReview: String
-    let id: Int
-
-    var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
