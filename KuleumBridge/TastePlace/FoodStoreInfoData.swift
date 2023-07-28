@@ -26,7 +26,7 @@ struct FoodStoreInfoData: View {
             .padding(.trailing, 15)
             .padding(.vertical, 15)
         }
-        .border(.black, width: 1)
+        .background(Color.white)
     }
 }
 

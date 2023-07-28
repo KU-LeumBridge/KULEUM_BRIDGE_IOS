@@ -13,58 +13,82 @@ struct StoreInfo: View {
         _region = State(initialValue: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: store.latitude, longitude: store.longitude), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)))
     }
     
+    func openExternalMap() {
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: store.coordinate))
+        mapItem.name = store.storeName
+        mapItem.openInMaps(launchOptions: nil)
+    }
+    
+    func copyAddressToClipboard() {
+        UIPasteboard.general.string = store.address
+    }
+    
     var body: some View {
-        VStack {
-            VStack(alignment: .leading) {
-                Spacer().frame(height: 20)
-            
-                Text(store.storeName)
-                    .font(.system(size: 30))
-                    .fontWeight(.black)
-            
-                Spacer().frame(height: 15)
-            
-                Text(store.address)
-                    .font(.system(size: 20))
-                    .fontWeight(.medium)
-            }
-            .padding(.trailing, 80)
+        ZStack {
+            Image("background_img")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
             
             VStack {
-                Map(coordinateRegion: $region)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 15)
-                // TODO: 맵에 해당 가게의 위치 픽커로 표시하기.
+                VStack(alignment: .leading) {
+                    Spacer().frame(height: 20)
+                    
+                    Text(store.storeName)
+                        .font(.system(size: 30))
+                        .fontWeight(.black)
+                        .foregroundColor(.white)
+                    
+                    Spacer().frame(height: 15)
+                    
+                    Text(store.address)
+                        .font(.system(size: 20))
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                }
+                .padding(.trailing, 80)
                 
-                HStack {
-                    Button(action: {
-                        showingAlert = true
-                        // TODO: 주소 복사 기능 구현
-                    }) {
-                        Text("주소 복사")
-                            .padding()
-                            .foregroundColor(.white)
-                            .fontWeight(.heavy)
-                            .background(Color.orange)
-                            .cornerRadius(10)
-                            .shadow(radius: 5, x: 5, y: 5)
+                VStack {
+                    Map(coordinateRegion: $region, annotationItems: [store]) { store in
+                        MapAnnotation(coordinate: store.coordinate) {
+                            Image("location-pin")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
                     }
-                    .alert("주소 복사가 완료되었습니다.", isPresented: $showingAlert) {
-                        Button("OK", role: .none) {}
-                    }
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 15)
                     
-                    Spacer().frame(width: 20)
-                    
-                    Button(action: {
-                        // TODO: 클릭 시 지도 앱으로 이동
-                    }) {
-                        Text("지도 앱에서 찾기")
-                            .padding()
-                            .foregroundColor(.white)
-                            .fontWeight(.heavy)
-                            .background(Color.orange)
-                            .cornerRadius(10)
-                            .shadow(radius: 5, x: 5, y: 5)
+                    HStack {
+                        Button(action: {
+                            copyAddressToClipboard()
+                            showingAlert = true
+                        }) {
+                            Text("주소 복사")
+                                .padding()
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .background(Color.orange)
+                                .cornerRadius(10)
+                                .shadow(radius: 5, x: 5, y: 5)
+                        }
+                        .alert("주소 복사가 완료되었습니다.", isPresented: $showingAlert) {
+                            Button("OK", role: .none) {}
+                        }
+                        
+                        Spacer().frame(width: 20)
+                        
+                        Button(action: {
+                            openExternalMap()
+                        }) {
+                            Text("지도 앱에서 찾기")
+                                .padding()
+                                .foregroundColor(.white)
+                                .fontWeight(.heavy)
+                                .background(Color.orange)
+                                .cornerRadius(10)
+                                .shadow(radius: 5, x: 5, y: 5)
+                        }
                     }
                 }
             }
