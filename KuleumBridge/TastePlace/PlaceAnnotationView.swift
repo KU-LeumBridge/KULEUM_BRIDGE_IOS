@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlaceAnnotationView: View {
     @State var store: Store
-    @State private var showingTitle: Bool = false
+    @State private var showingTitle = false
     @State private var selectedStore: Store?
 
     var body: some View {
