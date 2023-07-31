@@ -10,17 +10,13 @@ struct TabBarView: View {
             ZStack {
                 switch selectedIdx {
                 case 0:
-                    // TODO: 홈 뷰 연결
-                    ContentView()
+                    HomeView()
                 case 1:
-                    // 맛집 탭
                     TastePlaceView()
                 case 2:
-                    // 공지사항 탭
                     NoticeView()
                 default:
-                    // 임의 뷰
-                    ContentView()
+                    HomeView()
                 }
             }
 

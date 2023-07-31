@@ -14,6 +14,10 @@
 		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
 		A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */; };
 		A111530E2A55A5AE006E2282 /* FoodStoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */; };
+		A11DCFB52A761D24009C9C64 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DCFB42A761D24009C9C64 /* HomeView.swift */; };
+		A11DCFB72A762A8C009C9C64 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DCFB62A762A8C009C9C64 /* User.swift */; };
+		A11DCFB92A762CBB009C9C64 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DCFB82A762CBB009C9C64 /* Grade.swift */; };
+		A11DCFBB2A762D4D009C9C64 /* GradeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DCFBA2A762D4D009C9C64 /* GradeListView.swift */; };
 		A1309A672A5C53D3004C2120 /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1309A662A5C53D3004C2120 /* StoreInfo.swift */; };
 		A134D0322A6ACB4C00B112D4 /* TasteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D0312A6ACB4C00B112D4 /* TasteAPI.swift */; };
 		A134D0342A6ACC1B00B112D4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134D0332A6ACC1B00B112D4 /* Category.swift */; };
@@ -35,6 +39,10 @@
 		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		A111530B2A55972F006E2282 /* FoodStoreInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreInfoData.swift; sourceTree = "<group>"; };
 		A111530D2A55A5AE006E2282 /* FoodStoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreMapView.swift; sourceTree = "<group>"; };
+		A11DCFB42A761D24009C9C64 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A11DCFB62A762A8C009C9C64 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A11DCFB82A762CBB009C9C64 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		A11DCFBA2A762D4D009C9C64 /* GradeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeListView.swift; sourceTree = "<group>"; };
 		A1309A662A5C53D3004C2120 /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
 		A134D0312A6ACB4C00B112D4 /* TasteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteAPI.swift; sourceTree = "<group>"; };
 		A134D0332A6ACC1B00B112D4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -92,12 +100,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A11DCFB32A761D1A009C9C64 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A11DCFB42A761D24009C9C64 /* HomeView.swift */,
+				A11DCFBA2A762D4D009C9C64 /* GradeListView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A134D0302A6ACB3800B112D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A134D0312A6ACB4C00B112D4 /* TasteAPI.swift */,
 				A134D0332A6ACC1B00B112D4 /* Category.swift */,
 				A1C207422A73600200758EE0 /* Store.swift */,
+				A11DCFB62A762A8C009C9C64 /* User.swift */,
+				A11DCFB82A762CBB009C9C64 /* Grade.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +140,7 @@
 		A1F909D62A54F9C1004559AF /* KuleumBridge */ = {
 			isa = PBXGroup;
 			children = (
+				A11DCFB32A761D1A009C9C64 /* Home */,
 				A134D0302A6ACB3800B112D4 /* Model */,
 				23C28CC62A59AE0600B08B07 /* Login */,
 				233C2C0C2A678EB500362992 /* TastePlace */,
@@ -213,11 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11DCFBB2A762D4D009C9C64 /* GradeListView.swift in Sources */,
 				A19EAC862A56F2B700FE37CC /* NoticeView.swift in Sources */,
 				A111530A2A558696006E2282 /* FoodListView.swift in Sources */,
 				A1F909DA2A54F9C1004559AF /* ContentView.swift in Sources */,
 				A1C207432A73600200758EE0 /* Store.swift in Sources */,
 				A111530E2A55A5AE006E2282 /* FoodStoreMapView.swift in Sources */,
+				A11DCFB52A761D24009C9C64 /* HomeView.swift in Sources */,
 				A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */,
 				A134D0322A6ACB4C00B112D4 /* TasteAPI.swift in Sources */,
 				A111530C2A55972F006E2282 /* FoodStoreInfoData.swift in Sources */,
@@ -226,8 +248,10 @@
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
 				A1309A672A5C53D3004C2120 /* StoreInfo.swift in Sources */,
 				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,
+				A11DCFB72A762A8C009C9C64 /* User.swift in Sources */,
 				23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */,
 				23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */,
+				A11DCFB92A762CBB009C9C64 /* Grade.swift in Sources */,
 				A1F909D82A54F9C1004559AF /* KuleumBridgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
