@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C28CC72A59AE1D00B08B07 /* LoginView.swift */; };
 		23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E494F12A5A9A3100A196B9 /* TabBarView.swift */; };
+		37A5A734AA8056A120467431 /* Pods_KuleumBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8E6B0BADB4EE9BC6D9F943 /* Pods_KuleumBridge.framework */; };
 		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
 		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
 		A111530A2A558696006E2282 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153092A558696006E2282 /* FoodListView.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		23C28CC72A59AE1D00B08B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		23E494F12A5A9A3100A196B9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		781A660BA81D8CF0CF67B711 /* Pods-KuleumBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuleumBridge.release.xcconfig"; path = "Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge.release.xcconfig"; sourceTree = "<group>"; };
 		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
 		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
 		A11153092A558696006E2282 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 		A1F909D92A54F9C1004559AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1F909DB2A54F9C2004559AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F909DE2A54F9C2004559AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB8E6B0BADB4EE9BC6D9F943 /* Pods_KuleumBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KuleumBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA185AC5988499E979C6F39 /* Pods-KuleumBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuleumBridge.debug.xcconfig"; path = "Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A5A734AA8056A120467431 /* Pods_KuleumBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		33EDE38BBCEC32B0D938B0E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCA185AC5988499E979C6F39 /* Pods-KuleumBridge.debug.xcconfig */,
+				781A660BA81D8CF0CF67B711 /* Pods-KuleumBridge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A11DCFB32A761D1A009C9C64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +141,8 @@
 			children = (
 				A1F909D62A54F9C1004559AF /* KuleumBridge */,
 				A1F909D52A54F9C1004559AF /* Products */,
+				33EDE38BBCEC32B0D938B0E5 /* Pods */,
+				ACC6545938262C2D411A8228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +180,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ACC6545938262C2D411A8228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8E6B0BADB4EE9BC6D9F943 /* Pods_KuleumBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1F909E22A54F9C2004559AF /* Build configuration list for PBXNativeTarget "KuleumBridge" */;
 			buildPhases = (
+				88ECB4678E5B1C9560FA61D0 /* [CP] Check Pods Manifest.lock */,
 				A1F909D02A54F9C1004559AF /* Sources */,
 				A1F909D12A54F9C1004559AF /* Frameworks */,
 				A1F909D22A54F9C1004559AF /* Resources */,
+				94E6C36027C64D1F6DC47B91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +254,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88ECB4678E5B1C9560FA61D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KuleumBridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E6C36027C64D1F6DC47B91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1F909D02A54F9C1004559AF /* Sources */ = {
@@ -375,6 +444,7 @@
 		};
 		A1F909E32A54F9C2004559AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA185AC5988499E979C6F39 /* Pods-KuleumBridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +476,7 @@
 		};
 		A1F909E42A54F9C2004559AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781A660BA81D8CF0CF67B711 /* Pods-KuleumBridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
