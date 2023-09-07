@@ -1,19 +1,25 @@
 import Alamofire
 import Foundation
+import KeychainSwift
 
 class ResourceAPI {
-    private let url = "https://kuis.konkuk.ac.kr/ui/cpr-lib/user-modules.js?p=0.44831598539229955"
+    let keychain = KeychainSwift()
+    private let url = "https://kuis.konkuk.ac.kr/ui/cpr-lib/user-modules.js?p=0.4897527439677374"
     
-    func getParameters() {
+    func getParameters(completion: @escaping (_ parameter: [String: String]) -> Void) {
         var parameters: [String: String] = [:]
         
-        // Request 생성
-        let dataRequest = AF.request(url, method: .get)
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        ]
         
+        // Request 생성
+        let dataRequest = AF.request(url, method: .get, encoding: URLEncoding.default, headers: headers)
+//        print(dataRequest)
         dataRequest.responseString { response in
             switch response.result {
             case .success(let data):
-                print(data)
+//                print(data)
                 /* data 안에서 submit.addParameter("key", "value") 형태로 구하고자 하는 key, value가 저장되어 있습니다.
                  * 정규표현식을 이용하여 값을 빼낸 후 변수 parameters에 key와 value를 저장합니다.
                  */
@@ -33,6 +39,13 @@ class ResourceAPI {
                             parameters[key] = value
                         }
                     }
+                }
+                
+                completion(parameters)
+                
+                if let jsonData = try? JSONSerialization.data(withJSONObject: parameters),
+                   let jsonString = String(data: jsonData, encoding: .utf8) {
+                    self.keychain.set(jsonString, forKey: "payload")
                 }
                 
             case .failure(let error):

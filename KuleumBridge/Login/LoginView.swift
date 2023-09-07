@@ -6,6 +6,7 @@ enum Field {
 }
 
 struct LoginView: View {
+    @State private var loginSuccess = false
     @State var id: String = ""
     @State var pw: String = ""
     
@@ -53,8 +54,9 @@ struct LoginView: View {
                     
                     Spacer().frame(height: 30)
                     
-                    // TODO: id, pw가 일치할 경우에만 넘어가도록 처리
-                    NavigationLink(destination: TabBarView()) {
+                    Button(action: {
+                        AuthAPI().postLogin(id: id, pw: pw)
+                    }) {
                         Text("Login")
                             .font(.system(size: 23))
                             .foregroundColor(.white)
@@ -63,6 +65,19 @@ struct LoginView: View {
                             .background(.black)
                             .cornerRadius(2)
                     }
+                    
+                    NavigationLink(destination: TabBarView(), isActive: $loginSuccess, label: {}).opacity(0)
+                    
+                    // TODO: id, pw가 일치할 경우에만 넘어가도록 처리
+//                    NavigationLink(destination: TabBarView(), isActive: $loginSuccess) {
+//                        Text("Login")
+//                            .font(.system(size: 23))
+//                            .foregroundColor(.white)
+//                            .fontWeight(.bold)
+//                            .padding(EdgeInsets(top: 15, leading: 60, bottom: 15, trailing: 60))
+//                            .background(.black)
+//                            .cornerRadius(2)
+//                    }
                 }
             }
         }.onTapGesture {

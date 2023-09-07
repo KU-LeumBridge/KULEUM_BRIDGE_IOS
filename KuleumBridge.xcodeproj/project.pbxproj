@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2365522E2A8774FF00B4858B /* ResourceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2365522D2A8774FF00B4858B /* ResourceAPI.swift */; };
+		23743EF32A8D3CED003C7A3F /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23743EF22A8D3CED003C7A3F /* KeychainSwift */; };
 		23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C28CC72A59AE1D00B08B07 /* LoginView.swift */; };
 		23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E494F12A5A9A3100A196B9 /* TabBarView.swift */; };
+		23EFEE522A7D434C00EE0026 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EFEE512A7D434C00EE0026 /* AuthAPI.swift */; };
 		37A5A734AA8056A120467431 /* Pods_KuleumBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8E6B0BADB4EE9BC6D9F943 /* Pods_KuleumBridge.framework */; };
 		A11153062A55648A006E2282 /* TastePlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153052A55648A006E2282 /* TastePlaceView.swift */; };
 		A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11153072A556FDD006E2282 /* FoodCategoryView.swift */; };
@@ -33,8 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2365522D2A8774FF00B4858B /* ResourceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceAPI.swift; sourceTree = "<group>"; };
 		23C28CC72A59AE1D00B08B07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		23E494F12A5A9A3100A196B9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		23EFEE512A7D434C00EE0026 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		781A660BA81D8CF0CF67B711 /* Pods-KuleumBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KuleumBridge.release.xcconfig"; path = "Target Support Files/Pods-KuleumBridge/Pods-KuleumBridge.release.xcconfig"; sourceTree = "<group>"; };
 		A11153052A55648A006E2282 /* TastePlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastePlaceView.swift; sourceTree = "<group>"; };
 		A11153072A556FDD006E2282 /* FoodCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryView.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23743EF32A8D3CED003C7A3F /* KeychainSwift in Frameworks */,
 				37A5A734AA8056A120467431 /* Pods_KuleumBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +117,6 @@
 				FCA185AC5988499E979C6F39 /* Pods-KuleumBridge.debug.xcconfig */,
 				781A660BA81D8CF0CF67B711 /* Pods-KuleumBridge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +137,8 @@
 				A1C207422A73600200758EE0 /* Store.swift */,
 				A11DCFB62A762A8C009C9C64 /* User.swift */,
 				A11DCFB82A762CBB009C9C64 /* Grade.swift */,
+				23EFEE512A7D434C00EE0026 /* AuthAPI.swift */,
+				2365522D2A8774FF00B4858B /* ResourceAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +213,9 @@
 			dependencies = (
 			);
 			name = KuleumBridge;
+			packageProductDependencies = (
+				23743EF22A8D3CED003C7A3F /* KeychainSwift */,
+			);
 			productName = KuleumBridge;
 			productReference = A1F909D42A54F9C1004559AF /* KuleumBridge.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +244,9 @@
 				Base,
 			);
 			mainGroup = A1F909CB2A54F9C1004559AF;
+			packageReferences = (
+				23743EF12A8D3CED003C7A3F /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = A1F909D52A54F9C1004559AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,8 +328,10 @@
 				A134D0342A6ACC1B00B112D4 /* Category.swift in Sources */,
 				A15A2A882A7269B300A6ADDF /* PlaceAnnotationView.swift in Sources */,
 				A11153082A556FDD006E2282 /* FoodCategoryView.swift in Sources */,
+				23EFEE522A7D434C00EE0026 /* AuthAPI.swift in Sources */,
 				A1309A672A5C53D3004C2120 /* StoreInfo.swift in Sources */,
 				A19EAC882A56F82E00FE37CC /* NoticeWebView.swift in Sources */,
+				2365522E2A8774FF00B4858B /* ResourceAPI.swift in Sources */,
 				A11DCFB72A762A8C009C9C64 /* User.swift in Sources */,
 				23E494F22A5A9A3100A196B9 /* TabBarView.swift in Sources */,
 				23C28CC82A59AE1D00B08B07 /* LoginView.swift in Sources */,
@@ -528,6 +543,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23743EF12A8D3CED003C7A3F /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23743EF22A8D3CED003C7A3F /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23743EF12A8D3CED003C7A3F /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A1F909CC2A54F9C1004559AF /* Project object */;
 }
